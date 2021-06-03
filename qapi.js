@@ -42,6 +42,13 @@ export default {
 	"projectType": "gatsby",
 	"site": {
 		"styles": {},
-		"seo": {}
+		"seo": {
+			"title": "Xbox series X",
+			"og:title": "",
+			"favicon_32px": "https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/4.png?v=2021-06-03T12:05:27.934Z",
+			"favicon_apple_152px": "https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/4.png?v=2021-06-03T12:05:27.934Z",
+			"favicon_win10_270px": "https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/4.png?v=2021-06-03T12:05:27.934Z",
+			"background_win10": "#9BF00B"
+		}
 	}
 }

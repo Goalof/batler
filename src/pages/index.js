@@ -10,10 +10,16 @@ export default (() => {
 		<GlobalQuarklyPageStyles pageUrl={"index"} />
 		<Helmet>
 			<title>
-				Quarkly export
+				Xbox series X
 			</title>
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
-			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
+			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/4.png?v=2021-06-03T12:05:27.934Z"} type={"image/x-icon"} />
+			<link rel={"apple-touch-icon"} href={"https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/4.png?v=2021-06-03T12:05:27.934Z"} />
+			<link rel={"apple-touch-icon"} sizes={"76x76"} href={"https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/4.png?v=2021-06-03T12:05:27.934Z"} />
+			<link rel={"apple-touch-icon"} sizes={"152x152"} href={"https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/4.png?v=2021-06-03T12:05:27.934Z"} />
+			<link rel={"apple-touch-startup-image"} href={"https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/4.png?v=2021-06-03T12:05:27.934Z"} />
+			<meta name={"msapplication-TileImage"} content={"https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/4.png?v=2021-06-03T12:05:27.934Z"} />
+			<meta name={"msapplication-TileColor"} content={"#9BF00B"} />
 		</Helmet>
 		<Section padding="50px 0 50px 0" background="#0C0C0C" md-padding="20px 0 20px 0">
 			<Stack margin="0px 0px 0px 0px">
@@ -635,7 +641,7 @@ export default (() => {
 						lg-font="normal 700 72px/82px --fontFamily-googleInter"
 						sm-font="normal 700 42px/48px --fontFamily-googleInter"
 					>
-						Xbox series X{"\n\n"}{"\n\n"}
+						Xbox series X{"\n\n\n\n"}
 					</Text>
 					<Text
 						font="normal 700 53px/79px --fontFamily-googleInter"
