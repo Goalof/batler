@@ -41,7 +41,9 @@ export default {
 	"mode": "production",
 	"projectType": "gatsby",
 	"site": {
-		"styles": {},
+		"styles": {
+			"background": "#0C0C0C"
+		},
 		"seo": {
 			"title": "Xbox series X",
 			"og:title": "",

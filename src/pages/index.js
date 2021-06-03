@@ -3,7 +3,7 @@ import theme from "theme";
 import { Theme, Link, Image, Section, Text, Span } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
-import { Override, StackItem, Menu, Stack, SocialMedia } from "@quarkly/components";
+import { RawHtml, Override, StackItem, Menu, Stack, SocialMedia } from "@quarkly/components";
 import * as Components from "components";
 export default (() => {
 	return <Theme theme={theme}>
@@ -34,7 +34,7 @@ export default (() => {
 				<StackItem width="33.333%" display="flex" md-width="50%" lg-width="50%">
 					<Override slot="StackItemContent" align-items="center" justify-content="center" />
 					<Menu display="flex" md-display="none">
-						<Override slot="link-index">
+						<Override slot="link-index" href="#browse">
 							Browse
 						</Override>
 						<Override slot="item-404" display="none" />
@@ -47,6 +47,9 @@ export default (() => {
 							hover-color="rgba(155, 240, 11, 1)"
 						/>
 						<Override slot="link-active" color="#ffffff" />
+						<Override slot="link-inside" href="#inside" />
+						<Override slot="link-controller" href="#control" />
+						<Override slot="link-games" href="#games" />
 					</Menu>
 					<Components.MobileSide
 						menuPosition="left"
@@ -112,13 +115,14 @@ export default (() => {
 						text-transform="uppercase"
 						hover-box-shadow="0px 0px 20px rgba(155, 240, 11, 0.5)"
 					>
-						Order console{"\n\n"}
+						Order console
 					</Link>
 					{"            "}
 				</StackItem>
 			</Stack>
 		</Section>
 		<Section
+			id="browse"
 			padding="300px 0 400px 0"
 			background="url(https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/xbox.png?v=2020-11-26T16:08:42.878Z) 85% 50% no-repeat,#0C0C0C"
 			lg-padding="200px 0 330px 0"
@@ -136,7 +140,7 @@ export default (() => {
 						text-transform="uppercase"
 						margin="0px 0px 24px 0px"
 					>
-						completely new{"\n\n"}
+						completely new
 					</Text>
 					<Text
 						font="normal 700 160px/155.27px --fontFamily-googleInter"
@@ -148,16 +152,16 @@ export default (() => {
 						lg-font="normal 700 120px/128px --fontFamily-googleInter"
 						sm-font="normal 700 80px/72px --fontFamily-googleInter"
 					>
-						Xbox Series X{"\n\n"}
+						Xbox Series X
 					</Text>
 					<Text font="normal 600 23px/34px --fontFamily-googleInter" letter-spacing="-3%" color="rgba(129, 129, 129, 1)" lg-display="none">
 						Experience 12 teraflops of graphics processing{" "}
 						<br />
-						power and 4K resolution at up to 120 fps{"\n"}
+						power and 4K resolution at up to 120 fps
 						<br />
-						second with Xbox Series X. *{"\n\n"}
+						second with Xbox Series X. *
 					</Text>
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				{"    "}
 			</Stack>
@@ -170,33 +174,33 @@ export default (() => {
 					<Override slot="StackItemContent" flex-direction="column" />
 					<Image src="https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/4k.svg?v=2020-11-26T16:10:44.780Z" object-position="0%" width="150px" />
 					<Text font="normal 600 23px/34px --fontFamily-googleInter" letter-spacing="-3%" color="rgba(129, 129, 129, 1)" margin="16px 0px 0px 0px">
-						True gaming{"\n\n\n\n"}
+						True gaming
 					</Text>
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				<StackItem width="25%" display="flex" lg-width="50%">
 					<Override slot="StackItemContent" flex-direction="column" />
 					<Image src="https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/hdr.svg?v=2020-11-26T16:11:37.812Z" object-position="0%" width="150px" />
 					<Text font="normal 600 23px/34px --fontFamily-googleInter" letter-spacing="-3%" color="rgba(129, 129, 129, 1)" margin="16px 0px 0px 0px">
-						High Dynamic Range{"\n\n"}
+						High Dynamic Range
 					</Text>
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				<StackItem width="25%" display="flex" lg-width="50%">
 					<Override slot="StackItemContent" flex-direction="column" />
 					<Image src="https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/Group%20232.svg?v=2020-11-26T16:13:49.363Z" object-position="0%" margin="20px 0px 6px 0px" width="150px" />
 					<Text font="normal 600 23px/34px --fontFamily-googleInter" letter-spacing="-3%" color="rgba(129, 129, 129, 1)" margin="16px 0px 0px 0px">
-						Frame per second{"\n\n"}
+						Frame per second
 					</Text>
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				<StackItem width="25%" display="flex" lg-width="50%">
 					<Override slot="StackItemContent" flex-direction="column" />
 					<Image src="https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/v.svg?v=2020-11-26T16:11:53.396Z" object-position="0%" width="150px" />
 					<Text font="normal 600 23px/34px --fontFamily-googleInter" letter-spacing="-3%" color="rgba(129, 129, 129, 1)" margin="16px 0px 0px 0px">
-						Velocity Architecture{"\n\n"}
+						Velocity Architecture
 					</Text>
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				{"    "}
 			</Stack>
@@ -221,9 +225,8 @@ export default (() => {
 						<Span color="rgba(155, 240, 11, 1)">
 							entire history
 						</Span>
-						{"\n\n"}
 					</Text>
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				{"    "}
 			</Stack>
@@ -237,7 +240,7 @@ export default (() => {
 					lg-display="none"
 				>
 					<Override slot="StackItemContent" flex-direction="column" align-items="center" justify-content="center" />
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				<StackItem
 					width="50%"
@@ -266,7 +269,7 @@ export default (() => {
 					>
 						Power you
 						<br />
-						dreams{"\n\n"}
+						dreams
 					</Text>
 					<Text
 						font="normal 600 23px/34px --fontFamily-googleInter"
@@ -275,7 +278,7 @@ export default (() => {
 						margin="16px 0px 30px 0px"
 						text-align="left"
 					>
-						From future adventures, to current obsessions, to classic titles, thousands of favorites across four generations of Xbox look and play best on Xbox Series X.{"\n\n"}
+						From future adventures, to current obsessions, to classic titles, thousands of favorites across four generations of Xbox look and play best on Xbox Series X.
 					</Text>
 					<Text
 						font="normal 700 21px/25px --fontFamily-googleInter"
@@ -288,14 +291,14 @@ export default (() => {
 						sm-margin="0px 0px 60px 0px"
 						md-margin="0px 0px 70px 0px"
 					>
-						learn more{"\n\n"}
+						learn more
 					</Text>
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				{"    "}
 			</Stack>
 		</Section>
-		<Section padding="70px 0 50px 0" background="#0C0C0C" sm-padding="20px 0 50px 0">
+		<Section id="games" padding="70px 0 50px 0" background="#0C0C0C" sm-padding="20px 0 50px 0">
 			<Override slot="SectionContent" max-width="1220px" />
 			<Stack margin="0px 0px 0px 0px" gap="0px" background="rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/bg2.png?v=2020-11-26T16:34:39.971Z) 0% 0% /auto repeat scroll padding-box">
 				{"    "}
@@ -322,7 +325,7 @@ export default (() => {
 						sm-font="normal 700 48px/48px --fontFamily-googleInter"
 						sm-margin="120px 0px 30px 0px"
 					>
-						Optimized for series X-S{"\n\n"}
+						Optimized for series X-S
 					</Text>
 					<Text
 						font="normal 600 23px/34px --fontFamily-googleInter"
@@ -332,9 +335,9 @@ export default (() => {
 						text-align="left"
 						sm-margin="0px 0px 120px 0px"
 					>
-						From future adventures, to current obsessions, to classic titles, thousands of favorites across four generations of Xbox look and play best on Xbox Series X.{"\n\n\n\n"}
+						From future adventures, to current obsessions, to classic titles, thousands of favorites across four generations of Xbox look and play best on Xbox Series X.
 					</Text>
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				<StackItem
 					width="40%"
@@ -367,12 +370,12 @@ export default (() => {
 						right="0px"
 						bottom="auto"
 					/>
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				{"    "}
 			</Stack>
 		</Section>
-		<Section padding="60px 0 70px 0" background="#0C0C0C">
+		<Section id="control" padding="60px 0 70px 0" background="#0C0C0C">
 			<Override slot="SectionContent" max-width="1220px" />
 			<Stack margin="0px 0px 0px 0px">
 				{"    "}
@@ -390,9 +393,8 @@ export default (() => {
 						<Span color="rgba(155, 240, 11, 1)">
 							control
 						</Span>
-						{"\n\n"}
 					</Text>
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				{"    "}
 			</Stack>
@@ -418,9 +420,9 @@ export default (() => {
 					<StackItem width="100%" display="flex" align-items="center" justify-content="center">
 						<Override slot="StackItemContent" flex-direction="column" align-items="flex-start" margin="0px 0px 0px 0px" />
 						<Image src="https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/Rectangle%209.png?v=2020-11-26T16:39:01.328Z" padding="18px 0px 0px 0px" width="100%" />
-						{"        "}{"    "}
+						{"            "}
 					</StackItem>
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				<StackItem
 					width="50%"
@@ -445,12 +447,12 @@ export default (() => {
 						sm-width="100%"
 						sm-margin="0px 0px 0px 0px"
 					>
-						The new Xbox Wireless Controller brings elegant design, refined comfort, and instant sharing to a familiar favorite.{"\n\n"}
+						The new Xbox Wireless Controller brings elegant design, refined comfort, and instant sharing to a familiar favorite.
 					</Text>
 					<StackItem width="100%" display="flex" align-items="center" justify-content="center">
 						<Override slot="StackItemContent" flex-direction="column" align-items="flex-start" margin="0px 0px 0px 0px" />
 						<Image src="https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/Rectangle%208.png?v=2020-11-26T16:37:54.781Z" padding="122px 0px 18px 0px" width="100%" sm-padding="50px 0px 18px 0px" />
-						{"        "}{"    "}
+						{"            "}
 					</StackItem>
 					<Components.Knopka
 						display="flex"
@@ -546,13 +548,13 @@ export default (() => {
 							transform="translateX(-30px)"
 						/>
 						<Text font="normal 600 60px/110% --fontFamily-googleInter" letter-spacing="-0.03em" margin="0px 0px 24px 0px" sm-font="normal 600 37px/42px --fontFamily-googleInter">
-							Compatible with games on Windows 10{"\n\n"}
+							Compatible with games on Windows 10
 						</Text>
 						<Text font="normal 600 23px/34px --fontFamily-googleInter" letter-spacing="-0.03em" margin="0px 0px 0px 0px" color="#304D00">
-							The gamepad fully supports Windows 10, you can play all the games of this platform and switch easily{"\n\n"}
+							The gamepad fully supports Windows 10, you can play all the games of this platform and switch easily
 						</Text>
 					</Components.Knopka>
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				{"    "}
 			</Stack>
@@ -601,7 +603,6 @@ export default (() => {
 							<Span color="rgba(155, 240, 11, 1)">
 								perfect
 							</Span>
-							{"\n\n"}
 						</Text>
 						<Text
 							font="normal 600 23px/34px --fontFamily-googleInter"
@@ -612,16 +613,16 @@ export default (() => {
 							lg-text-align="center"
 							sm-width="100%"
 						>
-							The new Xbox Wireless Controller brings elegant design, refined comfort, and instant sharing to a familiar favorite.{"\n\n"}
+							The new Xbox Wireless Controller brings elegant design, refined comfort, and instant sharing to a familiar favorite.
 						</Text>
-						{"        "}{"    "}
+						{"            "}
 					</StackItem>
 					{"    "}
 				</Stack>
 				<Image width="100%" src="https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/xbox%20tech%202.png?v=2020-11-26T17:15:41.863Z" margin="-140px 0px 0px 0px" lg-margin="0px 0px 0px 0px" />
 			</Section>
 		</Section>
-		<Section padding="30px 0 0px 0" background="url(https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/Vector%204.png?v=2020-11-26T17:33:56.532Z) center center/90% no-repeat,#0C0C0C">
+		<Section id="inside" padding="30px 0 0px 0" background="url(https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/Vector%204.png?v=2020-11-26T17:33:56.532Z) center center/90% no-repeat,#0C0C0C">
 			<Override slot="SectionContent" max-width="1220px" sm-width="100%" sm-max-width="none" />
 			<Stack margin="0px 0px 0px 0px" gap="0px">
 				{"    "}
@@ -641,7 +642,7 @@ export default (() => {
 						lg-font="normal 700 72px/82px --fontFamily-googleInter"
 						sm-font="normal 700 42px/48px --fontFamily-googleInter"
 					>
-						Xbox series X{"\n\n\n\n"}
+						Xbox series X
 					</Text>
 					<Text
 						font="normal 700 53px/79px --fontFamily-googleInter"
@@ -651,7 +652,7 @@ export default (() => {
 						lg-font="normal 700 72px/82px --fontFamily-googleInter"
 						sm-font="normal 700 42px/48px --fontFamily-googleInter"
 					>
-						$499.99{"\n\n"}
+						$499.99
 					</Text>
 					<Text
 						font="normal 700 21px/25px --fontFamily-googleInter"
@@ -661,9 +662,9 @@ export default (() => {
 						margin="0px 0px 24px 0px"
 						sm-margin="0px 0px 33px 0px"
 					>
-						pre order{"\n\n"}
+						pre order
 					</Text>
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				{"    "}
 			</Stack>
@@ -700,7 +701,7 @@ export default (() => {
 						lg-top="9px"
 					/>
 					<Image src="https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/xbox%20purchase.png?v=2020-11-26T17:30:26.657Z" md-width="100%" lg-width="100%" />
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				{"    "}
 			</Stack>
@@ -742,7 +743,7 @@ export default (() => {
 							control{" "}
 						</Span>
 					</Text>
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				{"    "}
 			</Stack>
@@ -757,7 +758,7 @@ export default (() => {
 								<Override slot="Accordion Summary" background="rgba(230, 229, 230, 0)" border-width="0px" padding="16px 64px 16px 0px" />
 								<Override slot="Accordion Summary Icon" color="#ffffff" size="32px" />
 								<Text color="#ffffff" font="normal 600 23px/34px --fontFamily-googleInter" letter-spacing="-0.03em">
-									When is Xbox Series X release date?{"\n\n"}
+									When is Xbox Series X release date?
 								</Text>
 							</Components.AccordionSummary>
 							<Components.AccordionDetails>
@@ -769,7 +770,7 @@ export default (() => {
 									padding="0px 24px 0px 0px"
 								/>
 								<Text color="#777777" font="normal 600 20px/34px --fontFamily-googleInter" letter-spacing="-0.03em" margin="0px 0px 40px 0px">
-									Xbox Series X is launching at participating retailers worldwide on November 10, 2020.{"\n\n"}
+									Xbox Series X is launching at participating retailers worldwide on November 10, 2020.
 								</Text>
 							</Components.AccordionDetails>
 						</Components.AccordionItem>
@@ -848,7 +849,7 @@ export default (() => {
 				<StackItem width="33.333%" display="flex" md-width="100%" lg-width="100%">
 					<Override slot="StackItemContent" align-items="center" justify-content="center" />
 					<Menu display="flex" sm-flex-direction="column" sm-align-items="center">
-						<Override slot="link-index">
+						<Override slot="link-index" href="#browse">
 							Browse
 						</Override>
 						<Override slot="item-404" display="none" />
@@ -862,6 +863,9 @@ export default (() => {
 						/>
 						<Override slot="link-active" color="#ffffff" />
 						<Override slot="item" sm-margin="0px 0px 10px 0px" />
+						<Override slot="link-games" href="#games" />
+						<Override slot="link-controller" href="#control" />
+						<Override slot="link-inside" href="#inside" />
 					</Menu>
 					{"            "}
 				</StackItem>
@@ -892,16 +896,16 @@ export default (() => {
 				<StackItem width="50%" display="flex" md-width="100%" lg-width="100%">
 					<Override slot="StackItemContent" align-items="center" lg-justify-content="center" />
 					<Text font="normal 500 16px/24px --fontFamily-googleInter" color="#777777" letter-spacing="-0.03em" lg-margin="0px 0px 0px 0px">
-						© Microsoft 2020{"\n\n"}
+						© Microsoft 2020
 					</Text>
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				<StackItem width="50%" display="flex" md-width="100%" lg-width="100%">
 					<Override slot="StackItemContent" align-items="center" justify-content="flex-end" lg-justify-content="center" />
 					<Text font="normal 500 16px/24px --fontFamily-googleInter" color="#777777" letter-spacing="-0.03em" lg-margin="0px 0px 0px 0px">
-						Contact us Privacy & cookies{"\n\n"}
+						Contact us Privacy & cookies
 					</Text>
-					{"        "}{"    "}
+					{"            "}
 				</StackItem>
 				{"    "}
 			</Stack>
@@ -928,5 +932,10 @@ export default (() => {
 		>
 			Made on Quarkly
 		</Link>
+		<RawHtml>
+			<style place={"endOfHead"} rawKey={"60b8c674f16f1a6afae4eee9"}>
+				{"* {\n    scroll-behavior: smooth;\n    }"}
+			</style>
+		</RawHtml>
 	</Theme>;
 });
