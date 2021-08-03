@@ -1,6 +1,6 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Image, Section, Text, Span } from "@quarkly/widgets";
+import { Theme, Link, Image, Section, Box, Text, Span } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
 import { RawHtml, Override, StackItem, Menu, Stack, SocialMedia } from "@quarkly/components";
@@ -129,6 +129,87 @@ export default (() => {
 			sm-background="#0C0C0C url(https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/xbox.png?v=2020-11-26T16:08:42.878Z) center center/contain no-repeat"
 			sm-padding="100px 0 100px 0"
 		>
+			<Components.QuarklycommunityKitMobileSidePanel
+				breakpoint="all"
+				color="#ffffff"
+				menuPosition="full"
+				animDuration="0.6s"
+				animFunction="linear"
+			>
+				<Override slot="Button Icon" color="#ffffff" />
+				<Override
+					slot="Content"
+					position="absolute"
+					transition="opacity 1000ms ease 0s,transform 2000ms linear 0s"
+					transform="translateX(-100%) translateY(0px) translateZ(0px)"
+					background="#0C0C0C"
+					align-items="center"
+					justify-content="flex-start"
+					flex-direction="row"
+				/>
+				<Override
+					slot="Content :open"
+					transform="translateX(0px) translateY(0px) translateZ(0px)"
+					align-items="flex-end"
+					justify-content="flex-start"
+					flex-direction="column"
+				/>
+				<Override slot="Content :closed" />
+				<Override slot="Children" display="flex" align-items="center" justify-content="center" />
+				<Override slot="Overlay" display="block" />
+				<Box
+					display="flex"
+					justify-content="center"
+					margin="50px 0px 0px 20px"
+					flex-direction="column"
+					align-items="flex-start"
+				>
+					<Components.QuarklycommunityKitAnimation iteration="once" animation="Drop In" duration="2.5s">
+						<Box display="flex" flex-direction="column" align-items="flex-start" width="100%">
+							<Link
+								href="#"
+								text-align="center"
+								color="--light"
+								font="--headline2"
+								text-decoration-line="initial"
+								margin="0px 0px 30px 0px"
+							>
+								Home
+							</Link>
+							<Link
+								href="#"
+								text-align="center"
+								color="--light"
+								font="--headline2"
+								text-decoration-line="initial"
+								margin="0px 0px 30px 0px"
+							>
+								About
+							</Link>
+							<Link
+								href="#"
+								text-align="center"
+								color="--light"
+								font="--headline2"
+								text-decoration-line="initial"
+								margin="0px 0px 30px 0px"
+							>
+								Service
+							</Link>
+							<Link
+								href="#"
+								text-align="center"
+								color="--light"
+								font="--headline2"
+								text-decoration-line="initial"
+								margin="0px 0px 20px 0px"
+							>
+								Contact
+							</Link>
+						</Box>
+					</Components.QuarklycommunityKitAnimation>
+				</Box>
+			</Components.QuarklycommunityKitMobileSidePanel>
 			<Stack margin="0px 0px 0px 0px">
 				{"    "}
 				<StackItem width="100%" display="flex">
@@ -619,6 +700,7 @@ export default (() => {
 					</StackItem>
 					{"    "}
 				</Stack>
+				<Components.EmbedHTML />
 				<Image width="100%" src="https://uploads.quarkly.io/5fbfb773b1c8af001eb57f5a/images/xbox%20tech%202.png?v=2020-11-26T17:15:41.863Z" margin="-140px 0px 0px 0px" lg-margin="0px 0px 0px 0px" />
 			</Section>
 		</Section>

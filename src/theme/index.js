@@ -52,7 +52,7 @@ export default {
 	},
 	"font": {
 		"headline1": "normal 900 72px/1.2 --fontFamily-googleInter",
-		"headline2": "normal 900 42px/1.2 --fontFamily-sans",
+		"headline2": "normal 700 42px/1.2 --fontFamily-googleInter",
 		"headline3": "normal 500 28px/1.2 --fontFamily-sans",
 		"base": "normal 300 16px/1.5 --fontFamily-sans",
 		"lead": "normal 600 17px/20px --fontFamily-googleInter"
@@ -172,5 +172,5 @@ export default {
 			}
 		}
 	},
-	"version": 4
+	"version": 5
 }

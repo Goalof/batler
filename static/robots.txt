@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xbox-series-x.netlify.app/sitemap-index.xml
